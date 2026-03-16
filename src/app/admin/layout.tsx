@@ -8,6 +8,7 @@ const NAV_ITEMS: NavItem[] = [
   { href: "/admin", label: "Dashboard", icon: "LayoutDashboard" },
   { href: "/admin/clients", label: "Clientes", icon: "Users" },
   { href: "/admin/projects", label: "Projetos", icon: "FolderKanban" },
+  { href: "/admin/settings/integrations", label: "Integra\u00e7\u00f5es", icon: "Settings" },
 ];
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
