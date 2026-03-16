@@ -7,10 +7,19 @@ export async function GET(request: NextRequest) {
   if (!auth.authorized) return auth.response;
 
   const admin = createAdminClient();
-  const { data: projects, error } = await admin
+  const { searchParams } = new URL(request.url);
+  const clientId = searchParams.get("client_id");
+
+  let query = admin
     .from("projects")
     .select("*, client:clients(name, company)")
     .order("updated_at", { ascending: false });
+
+  if (clientId) {
+    query = query.eq("client_id", clientId);
+  }
+
+  const { data: projects, error } = await query;
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   return NextResponse.json({ projects });

@@ -4,11 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard, Users, FolderKanban, Sparkles, Clock, FolderOpen, Bell, Settings,
+  FileSignature,
   type LucideIcon,
 } from "lucide-react";
 
 const ICON_MAP: Record<string, LucideIcon> = {
   LayoutDashboard, Users, FolderKanban, Sparkles, Clock, FolderOpen, Bell, Settings,
+  FileSignature,
 };
 
 export interface NavItem {

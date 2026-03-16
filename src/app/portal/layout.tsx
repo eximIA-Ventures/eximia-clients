@@ -12,6 +12,7 @@ const NAV_ITEMS: NavItem[] = [
   { href: "/portal/welcome", label: "Welcome", icon: "Sparkles" },
   { href: "/portal/timeline", label: "Timeline", icon: "Clock" },
   { href: "/portal/documents", label: "Documentos", icon: "FolderOpen" },
+  { href: "/portal/contracts", label: "Contratos", icon: "FileSignature" },
   { href: "/portal/updates", label: "Atualizações", icon: "Bell" },
 ];
 
