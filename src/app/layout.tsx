@@ -15,6 +15,12 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "eximIA Clients",
   description: "Acompanhe seus projetos em tempo real — eximIA Ventures",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
